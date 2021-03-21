@@ -20,6 +20,8 @@ Based on the combination of these four features Fisher developed a linear discri
 
 STEPS:
 1. Download the fisher's iris data set to the project folder [REF1]
+2. Converting the csv columns to lists
+3. Convert list items from strings to floats
 2. Summary of each variable to a single text file. 
 
 

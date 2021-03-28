@@ -17,6 +17,7 @@
 #Reading the Iris Dataset from the csv file (in repository folder):
 
 import csv
+import pandas as pd
 
 filename='IrisData.csv'
 
@@ -63,22 +64,18 @@ petalWidth=[]
 for item in column4:
     petalWidth.append(float(item))
 
-#Calculating parameters of the list: Max, Min, Average
-maxSL=max(sepalLength)
-maxSW=max(sepalWidth)
-maxPL=max(petalLength)
-maxPW=max(petalWidth)
-minSL=min(sepalLength)
-minSW=min(sepalWidth)
-minPL=min(petalLength)
-minPW=min(petalWidth)
-#Average needs to be calculate with a function
+#Creating Dict Lists                                                [REFD]: https://www.tutorialspoint.com/python_pandas/python_pandas_descriptive_statistics.htm
+dictLists={'Sepal Length':pd.Series(sepalLength), 'Sepal Width':pd.Series(sepalWidth), 'Petal Length':pd.Series(petalLength), 'Petal Width':pd.Series(petalWidth)}
+
+#Creating DataFrame                                                 [REFE]:https://www.w3resource.com/pandas/dataframe/dataframe-describe.php
+df=pd.DataFrame(dictLists)                                          
+analysisPara=df.describe()                  #analysis of parameters (count, mean, stf, min, max and percentiles)
 
 #Writing the info into the txt file:
 textFile='VariablesSummary.txt'
 
 def writeFile ():
     with open (textFile, "wt") as tf:
-        tf.write(str(maxSL))
+        tf.write(str(analysisPara))
 
 writeFile()

@@ -96,8 +96,6 @@ setosaSL=sepalLength[:50]
 versicolorSL=sepalLength[50:100]
 virginicaSL=sepalLength[100:]
 
-#bins1=np.linspace(4,9,100)    #[REF]: https://stackoverflow.com/questions/6871201/plot-two-histograms-on-single-chart-with-matplotlib
-
 #SEPAL WIDTH
 setosaSW=sepalWidth[:50]
 versicolorSW=sepalWidth[50:100]
@@ -119,7 +117,7 @@ sepalWidthHist=[setosaSW, versicolorSW, virginicaSW]
 petalLengthHist=[setosaPL, versicolorPL, virginicaPL]
 petalWidthHist=[setosaPW, versicolorPW, virginicaPW]
 
-def generalHist():
+def generalHist():                                                                  #get source for subplots
     bins=15
     fig, ((ax0, ax1), (ax2, ax3)) = plt.subplots(nrows=2, ncols=2)
 
@@ -137,8 +135,6 @@ def generalHist():
 
     fig.tight_layout()
     plt.savefig('general Hist.png')
-
-
 
 
 def histFlower():
@@ -165,7 +161,34 @@ def histFlower():
     fig.tight_layout()
     plt.savefig('4plots.png')
 
-generalHist()
-histFlower()
+#generalHist()
+#histFlower()
 
+def scatterFlowers ():
+    
+    fig, (ax0, ax1, ax2) = plt.subplots(nrows=1, ncols=3)
 
+    ax0.scatter(sepalLength[:50], setosaSW, color='red', label='Setosa')
+    ax0.scatter(sepalLength[50:100], versicolorSW, color='blue', label='Versicolor')
+    ax0.scatter(sepalLength[100:], virginicaSW, color='green', label='Virginica')
+    ax0.set_xlabel('Sepal Length')                                                  #[REF] ax1.set_ylabel :https://stackoverflow.com/questions/6963035/pyplot-axes-labels-for-subplots
+    ax0.set_ylabel('Sepal Width')
+    ax0.legend()                                                                    #[REF] ax1.legend() https://stackoverflow.com/questions/52056261/how-to-set-label-for-each-subplot-in-a-plot-in-matplotlib
+    
+    ax1.scatter(sepalLength[:50], setosaPL, color='red', label='Setosa')
+    ax1.scatter(sepalLength[50:100], versicolorPL, color='blue', label='Versicolor')
+    ax1.scatter(sepalLength[100:], virginicaPL, color='green', label='Virginica')
+    ax1.set_xlabel('Sepal Length')
+    ax1.set_ylabel('Petal Length')
+    ax1.legend()
+
+    ax2.scatter(sepalLength[:50], setosaPW, color='red', label='Setosa')
+    ax2.scatter(sepalLength[50:100], versicolorPW, color='blue', label='Versicolor')
+    ax2.scatter(sepalLength[100:], virginicaPW, color='green', label='Virginica')
+    ax2.set_xlabel('Sepal Length')
+    ax2.set_ylabel('Petal Length')
+    ax2.legend()
+
+    plt.show()
+
+scatterFlowers()

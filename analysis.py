@@ -1,38 +1,17 @@
-
-#Importing Fisher Iris Dataset
-#from sklearn import datasets
-#from sklearn.decomposition import PCA
-
-#iris=datasets.load_iris()
-
-#print(type(iris))
-
-#Saving dataset into a file.
-#filename="irisdataset.txt"
-
-#with open (filename, "wt") as f:
-    #f.write('Hello')
+#Analysis of Iris Fisher Dataset
+#Author:Joana Ruas
 
 
-#Reading the Iris Dataset from the csv file (in repository folder):
 
 import csv
 import pandas as pd
 import matplotlib.pyplot as plt 
 import numpy as np
 
+#Iris Fisher Dataset downloaded in CSV and saved in project folder. [REF]: Dataset download: https://tableconvert.com/?output=csv
 filename='IrisData.csv'
 
-#with open (filename, 'rt') as csvFile:                              #[REFA]: code in "Me Messing up with CSV File" from week 7 of Programming and Scripting Module                  
-    #csvReader = csv.reader(csvFile, delimiter=',')
-    #firstLine= True                                                 # This is just to not print the first line of the csv file
-    #for line in csvReader:
-        #if firstLine:
-         #   firstLine=False
-          #  continue
-        #print (line)
-
-      
+#Reading from CSV file     
 with open (filename, 'rt') as csvFile:
     csvReader=csv.DictReader(csvFile)
     data={}
@@ -43,28 +22,18 @@ with open (filename, 'rt') as csvFile:
             except KeyError:
                 data[header]=[value]
 
-#Lists created but in strings type. Data will be converted to float after
+#Lists created but in strings type. 
+#Data will be converted to float in the next step
 column1=data['ï»¿sepal_length']               
 column2=data['sepal_width']              
 column3=data['petal_length']
 column4=data['petal_width']
 
-#Converting List from string data to float data
-sepalLength = []                                                    #[REFC]: https://stackoverflow.com/questions/1614236/in-python-how-do-i-convert-all-of-the-items-in-a-list-to-floats
-for item in column1:
-    sepalLength.append(float(item))
-
-sepalWidth=[]
-for item in column2:
-    sepalWidth.append(float(item))
-
-petalLength=[]
-for item in column3:
-    petalLength.append(float(item))
-
-petalWidth=[]
-for item in column4:
-    petalWidth.append(float(item))
+#Converting Lists from string data to float numbers
+sepalLength=[float(i) for i in column1]                             #[REF]:https://stackoverflow.com/questions/1614236/in-python-how-do-i-convert-all-of-the-items-in-a-list-to-floats
+sepalWidth=[float(i) for i in column2]
+petalLength=[float(i) for i in column3]
+petalWidth=[float(i) for i in column4]
 
 #Creating Dict Lists                                                [REFD]: https://www.tutorialspoint.com/python_pandas/python_pandas_descriptive_statistics.htm
 dictLists={'Sepal Length':pd.Series(sepalLength), 'Sepal Width':pd.Series(sepalWidth), 'Petal Length':pd.Series(petalLength), 'Petal Width':pd.Series(petalWidth)}
@@ -73,9 +42,7 @@ dictLists={'Sepal Length':pd.Series(sepalLength), 'Sepal Width':pd.Series(sepalW
 df=pd.DataFrame(dictLists)                                          
 analysisPara=df.describe()                  #analysis of parameters (count, mean, stf, min, max and percentiles)
 
-
 #TRY TO SORT DECIMAL PLACES
-
 
 #Writing the info into the txt file:
 textFile='VariablesSummary.txt'
@@ -87,12 +54,10 @@ def writeFile ():
 writeFile()
 
 
-#Histogram for each variable 
-
-
 #HISTOGRAMS
+#Separating each variable into the types of flowers.
 #SEPAL LENGTH
-setosaSL=sepalLength[:50]
+setosaSL=sepalLength[:50]                                       #can eliminate this by using always like sepalLength[0:50]
 versicolorSL=sepalLength[50:100]
 virginicaSL=sepalLength[100:]
 
@@ -111,7 +76,7 @@ setosaPW=petalWidth[:50]
 versicolorPW=petalWidth[50:100]
 virginicaPW=petalWidth[100:]
 
-#
+#Combining Lists to be able to identiy 
 sepalLengthHist=[setosaSL, versicolorSL, virginicaSL]
 sepalWidthHist=[setosaSW, versicolorSW, virginicaSW]
 petalLengthHist=[setosaPL, versicolorPL, virginicaPL]
@@ -139,8 +104,7 @@ def generalHist():                                                              
 
 def histFlower():
     bins=15
-    colors = ['red', 'tan', 'lime']
-    colours=['red','blue','green']
+    colours=['goldenrod','salmon','cornflowerblue']
     labels=['Setosa','Versicolor','Virginica']
 
     fig, ((ax0, ax1), (ax2, ax3)) = plt.subplots(nrows=2, ncols=2)
@@ -164,31 +128,36 @@ def histFlower():
 #generalHist()
 #histFlower()
 
+#SCATTER:
 def scatterFlowers ():
     
     fig, (ax0, ax1, ax2) = plt.subplots(nrows=1, ncols=3)
 
-    ax0.scatter(sepalLength[:50], setosaSW, color='red', label='Setosa')
-    ax0.scatter(sepalLength[50:100], versicolorSW, color='blue', label='Versicolor')
-    ax0.scatter(sepalLength[100:], virginicaSW, color='green', label='Virginica')
+    ax0.scatter(sepalLength[:50], setosaSW, color='goldenrod', label='Setosa')      #[REF] data colors: https://matplotlib.org/stable/gallery/color/named_colors.html
+    ax0.scatter(sepalLength[50:100], versicolorSW, color='salmon', label='Versicolor')
+    ax0.scatter(sepalLength[100:], virginicaSW, color='cornflowerblue', label='Virginica')
     ax0.set_xlabel('Sepal Length')                                                  #[REF] ax1.set_ylabel :https://stackoverflow.com/questions/6963035/pyplot-axes-labels-for-subplots
     ax0.set_ylabel('Sepal Width')
+    ax0.set_facecolor('ivory')                                                       #[REF] ax1.set_facecolor: https://stackoverflow.com/questions/14088687/how-to-change-plot-background-color
     ax0.legend()                                                                    #[REF] ax1.legend() https://stackoverflow.com/questions/52056261/how-to-set-label-for-each-subplot-in-a-plot-in-matplotlib
     
-    ax1.scatter(sepalLength[:50], setosaPL, color='red', label='Setosa')
-    ax1.scatter(sepalLength[50:100], versicolorPL, color='blue', label='Versicolor')
-    ax1.scatter(sepalLength[100:], virginicaPL, color='green', label='Virginica')
+    ax1.scatter(sepalLength[:50], setosaPL, color='goldenrod', label='Setosa')
+    ax1.scatter(sepalLength[50:100], versicolorPL, color='salmon', label='Versicolor')
+    ax1.scatter(sepalLength[100:], virginicaPL, color='cornflowerblue', label='Virginica')
     ax1.set_xlabel('Sepal Length')
     ax1.set_ylabel('Petal Length')
+    ax1.set_facecolor('ivory')
     ax1.legend()
 
-    ax2.scatter(sepalLength[:50], setosaPW, color='red', label='Setosa')
-    ax2.scatter(sepalLength[50:100], versicolorPW, color='blue', label='Versicolor')
-    ax2.scatter(sepalLength[100:], virginicaPW, color='green', label='Virginica')
+    ax2.scatter(sepalLength[:50], setosaPW, color='goldenrod', label='Setosa')
+    ax2.scatter(sepalLength[50:100], versicolorPW, color='salmon', label='Versicolor')
+    ax2.scatter(sepalLength[100:], virginicaPW, color='cornflowerblue', label='Virginica')
     ax2.set_xlabel('Sepal Length')
     ax2.set_ylabel('Petal Length')
+    ax2.set_facecolor('ivory')
     ax2.legend()
 
     plt.show()
 
 scatterFlowers()
+#ADD UNITS TO GRAPHS

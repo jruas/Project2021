@@ -14,7 +14,7 @@ The Irish Fisher dataset was developed by Ronal Fisher in 1936. The dataset cons
 The combination of the four parameters, allowed Fisher to develope a linear discriminant model to distinguish the species from each other.
 This dataset became a typical test case for many statistical classification techniques in machine learning. [REFA]
 
-<img src="images/Iris.PNG" width="100">
+<img src="images/Iris.PNG" width="1000">
 
 [REFB]
 ## WHY COLLECTING DATA?

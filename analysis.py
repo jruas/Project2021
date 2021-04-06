@@ -131,7 +131,7 @@ def histFlower():
 #SCATTER:
 def scatterFlowers ():
     
-    fig, ((ax0, ax1, ax2),(ax3, ax4, ax5)) = plt.subplots(nrows=2, ncols=3)
+    fig, ((ax0, ax1, ax2),(ax3, ax4, ax5),(ax6, ax7, ax8), (ax9, ax10, ax11)) = plt.subplots(nrows=4, ncols=3)
 
     ax0.scatter(sepalLength[:50], setosaSW, color='goldenrod', label='Setosa')      #[REF] data colors: https://matplotlib.org/stable/gallery/color/named_colors.html
     ax0.scatter(sepalLength[50:100], versicolorSW, color='salmon', label='Versicolor')
@@ -180,6 +180,57 @@ def scatterFlowers ():
     ax5.set_ylabel('Petal Width (cm)')
     ax5.set_facecolor('ivory')
     ax5.legend()
+
+    ax6.scatter(petalLength[:50], setosaSL, color='goldenrod', label='Setosa')
+    ax6.scatter(petalLength[50:100], versicolorSL, color='salmon', label='Versicolor')
+    ax6.scatter(petalLength[100:], virginicaSL, color='cornflowerblue', label='Virginica')
+    ax6.set_xlabel('Petal Length (cm)')
+    ax6.set_ylabel('Sepal Length (cm)')
+    ax6.set_facecolor('ivory')
+    ax6.legend()
+
+    ax7.scatter(petalLength[:50], setosaSW, color='goldenrod', label='Setosa')
+    ax7.scatter(petalLength[50:100], versicolorSW, color='salmon', label='Versicolor')
+    ax7.scatter(petalLength[100:], virginicaSW, color='cornflowerblue', label='Virginica')
+    ax7.set_xlabel('Petal Length (cm)')
+    ax7.set_ylabel('Sepal Width (cm)')
+    ax7.set_facecolor('ivory')
+    ax7.legend()
+
+    ax8.scatter(petalLength[:50], setosaPW, color='goldenrod', label='Setosa')
+    ax8.scatter(petalLength[50:100], versicolorPW, color='salmon', label='Versicolor')
+    ax8.scatter(petalLength[100:], virginicaPW, color='cornflowerblue', label='Virginica')
+    ax8.set_xlabel('Petal Length (cm)')
+    ax8.set_ylabel('Petal Width (cm)')
+    ax8.set_facecolor('ivory')
+    ax8.legend()
+
+    ax9.scatter(petalWidth[:50], setosaSL, color='goldenrod', label='Setosa')
+    ax9.scatter(petalWidth[50:100], versicolorSL, color='salmon', label='Versicolor')
+    ax9.scatter(petalWidth[100:], virginicaSL, color='cornflowerblue', label='Virginica')
+    ax9.set_xlabel('Petal Width (cm)')
+    ax9.set_ylabel('Sepal Length (cm)')
+    ax9.set_facecolor('ivory')
+    ax9.legend()
+
+    ax10.scatter(petalWidth[:50], setosaSW, color='goldenrod', label='Setosa')
+    ax10.scatter(petalWidth[50:100], versicolorSW, color='salmon', label='Versicolor')
+    ax10.scatter(petalWidth[100:], virginicaSW, color='cornflowerblue', label='Virginica')
+    ax10.set_xlabel('Petal Width (cm)')
+    ax10.set_ylabel('Sepal Width (cm)')
+    ax10.set_facecolor('ivory')
+    ax10.legend()
+
+    ax11.scatter(petalWidth[:50], setosaPL, color='goldenrod', label='Setosa')
+    ax11.scatter(petalWidth[50:100], versicolorPL, color='salmon', label='Versicolor')
+    ax11.scatter(petalWidth[100:], virginicaPL, color='cornflowerblue', label='Virginica')
+    ax11.set_xlabel('Petal Width (cm)')
+    ax11.set_ylabel('Petal Length (cm)')
+    ax11.set_facecolor('ivory')
+    ax11.legend()
+
+
+
 
     plt.show()
 

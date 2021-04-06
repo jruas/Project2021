@@ -14,7 +14,8 @@ The Iris Fisher dataset was developed by Ronal Fisher in 1936. The dataset consi
 The combination of the four parameters, allowed Fisher to develope a linear discriminant model to distinguish the species from each other.
 This dataset became a typical test case for many statistical classification techniques in machine learning. [A]
 
-<img src="images/Iris.PNG" width="1000">
+<img src="images/Iris.PNG" width="800">
+
 [B]
 
 The data Ronal Risher used, were collected by the botanist Dr.Edgar Anderson and published in 1935. Anderson collected data from Iris Setosa and Iris Versicolor from Gaspe Peninsula, Canada. To make the data collection as accurate as possible, all samples were "from the same pasture, picked on the same day and measured at the same time by the same person with the same apparatus". For the Iris Virginica, the same rigor was applied to the collection. Anderson was a student in Washington University in St.Luis in 1929, when he took a fellowship to work in Britain with other scientists. One of these scientists was Ronal Fisher, who obtained Anderson's permission to use the data in the article (xxxx) in 1936: The Use of Multiple Measurements in Taxonomic Problems” in the journal Annals of Eugenics. [A,C]
@@ -27,13 +28,15 @@ The data Ronal Risher used, were collected by the botanist Dr.Edgar Anderson and
 
 
 ## SUMMARY OF PROGRAM:
-1. Download the fisher's iris data set to the project folder [REF1]
+1. Download the fisher's iris data set to the project folder [1]
 2. Converting the csv columns to lists
 3. Convert list items from strings to floats
 2. Summary of each variable to a single text file. 
 
 
 ## DETAILED STEPS OF PROGRAM:
+
+
 
 
 ## RESULTS
@@ -45,7 +48,7 @@ The data Ronal Risher used, were collected by the botanist Dr.Edgar Anderson and
 [A]: https://en.wikipedia.org/wiki/Iris_flower_data_set
 [B]: https://medium.com/@Nivitus./iris-flower-classification-machine-learning-d4e337140fa4
 [C]: https://towardsdatascience.com/the-iris-dataset-a-little-bit-of-history-and-biology-fb4812f5a7b5
-[REF1]: Dataset downloaded from https://tableconvert.com/?output=csv
+[1]: Dataset downloaded from https://tableconvert.com/?output=csv
 
 
 

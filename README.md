@@ -30,7 +30,7 @@ The data Ronal Risher used, were collected by the botanist Dr.Edgar Anderson and
 
 # Analysis of variables
 The first step to understand the database was to evaluate the classic statistic parameters (number of samples, minumum and maximum values, average, standard deviation and percentils). This was the table obtained that summarizes the data for the 4 measures: Sepal Lenght, Sepal Width, Petal Length and Petal Width:
-<img src="images/generaltable.PNG" width="500">
+<img src="images/generaltable.png" width="500">
 
 
 

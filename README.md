@@ -29,11 +29,12 @@ The data Ronal Risher used, were collected by the botanist Dr.Edgar Anderson and
 
 
 # Analysis of variables
-The first step to understand the database was to evaluate the classic statistic parameters (number of samples, minumum and maximum values, average, standard deviation and percentils). This was the table obtained that summarizes the data for the 4 measures: Sepal Lenght, Sepal Width, Petal Length and Petal Width:
+The first step to understand the database was to evaluate the classic statistic parameters (number of samples, minumum and maximum values, average, standard deviation and percentils). This was the table obtained that summarizes the data for the 4 measures: Sepal Lenght, Sepal Width, Petal Length and Petal Width (data in centimeters):
 <img src="images/generaltable.png" width="500">
 
+Each parameter was measured for the three species mentioned above. To evaluate each parameter in each species, detailed tables were generated:
 
-
+<img src="images/detailed.png" width="900">
 
 ## STEP in PROGRAM FILE:
 1. Download the fisher's iris data set to the project folder [1]

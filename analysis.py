@@ -40,9 +40,12 @@ dictLists={'Sepal Length':pd.Series(sepalLength), 'Sepal Width':pd.Series(sepalW
 
 #Creating DataFrame                                                 [REFE]:https://www.w3resource.com/pandas/dataframe/dataframe-describe.php
 df=pd.DataFrame(dictLists)
-pd.set_option("display.precision", 2)                                          
+pd.set_option("display.precision", 2)       #Change table to 2 decimal places [REF:https://pandas.pydata.org/pandas-docs/stable/user_guide/options.html]                                    
 analysisPara=df.describe()                  #analysis of parameters (count, mean, stf, min, max and percentiles)
 
+setosaTBL=df.loc[0:49].describe()
+versicolorTBL=df.loc[50:99].describe()
+virginicaTBL=df.loc[100:].describe()
 #TRY TO SORT DECIMAL PLACES
 
 #Writing the info into the txt file:
@@ -50,7 +53,14 @@ textFile='VariablesSummary.txt'
 
 def writeFile ():
     with open (textFile, "wt") as tf:
-        tf.write(str(analysisPara))
+        tf.write('General Table'+ '\n' +'\n')
+        tf.write(str(analysisPara) + '\n'+'\n')
+        tf.write('Iris Setosa' + '\n' +'\n')
+        tf.write(str(setosaTBL)+ '\n'+'\n')
+        tf.write('Iris Vericolor' +'\n'+ '\n')
+        tf.write(str(versicolorTBL)+'\n'+'\n')
+        tf.write('Iris Virginica' + '\n'+ '\n')
+        tf.write(str(virginicaTBL)+'\n'+'\n')
 
 writeFile()
 

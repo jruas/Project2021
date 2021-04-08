@@ -24,14 +24,21 @@ The data Ronal Risher used, were collected by the botanist Dr.Edgar Anderson and
 ## why STIL IMPORTANT TODAY?
 
 
+## Goal of this research:
+- Analysis data and identify the three species of Iris, based on that data analysis.
+
+
+# Analysis of variables
+The first step to understand the database was to evaluate the classic statistic parameters (number of samples, minumum and maximum values, average, standard deviation and percentils). This was the table obtained that summarizes the data for the 4 measures: Sepal Lenght, Sepal Width, Petal Length and Petal Width:
+<img src="images/generaltable.PNG" width="500">
 
 
 
-## SUMMARY OF PROGRAM:
+
+## STEP in PROGRAM FILE:
 1. Download the fisher's iris data set to the project folder [1]
-2. Converting the csv columns to lists
-3. Convert list items from strings to floats
-2. Summary of each variable to a single text file. 
+2. Converting the csv columns to lists of floats
+3. Summary of each variable to a single text file. 
 
 
 ## DETAILED STEPS OF PROGRAM:

@@ -39,7 +39,8 @@ petalWidth=[float(i) for i in column4]
 dictLists={'Sepal Length':pd.Series(sepalLength), 'Sepal Width':pd.Series(sepalWidth), 'Petal Length':pd.Series(petalLength), 'Petal Width':pd.Series(petalWidth)}
 
 #Creating DataFrame                                                 [REFE]:https://www.w3resource.com/pandas/dataframe/dataframe-describe.php
-df=pd.DataFrame(dictLists)                                          
+df=pd.DataFrame(dictLists)
+pd.set_option("display.precision", 2)                                          
 analysisPara=df.describe()                  #analysis of parameters (count, mean, stf, min, max and percentiles)
 
 #TRY TO SORT DECIMAL PLACES

@@ -44,8 +44,13 @@ All the summary tables above can be found in the text file(VariablesSummary.txt)
 For an easier interpretation of data, histograms were developed. First, one histogram for each varaibles (disregarding the diferent species):
 
 
-<img src="generalHist.png" width="900">
+<img src="generalHist.png" width="450">
+From the histograms above, it is possible to realize that the Sepal Length varies from 4 to 8 (aprox), the Sepal Width from 2 to 4.5 (aprox), the Petal Length from 1 to 7 (aprox) and the Petal Width from 0 t0 2.5 (aprox).
+For this analysis, it was also developed the same histograms but showing the diferences between species within the same histogram. These histograms are below:
 
+<img src="4plots.png" width="450">
+
+Analysing the histograms above, it is possible to see that species Stosa has the minimum values of the data for Petal Length, Sepal Length and Speal Width, and maximum values of the data for Petal Width. It is also possible to see that the histogram for Virginica (in blue) is always a little to the right of histogram Versicolor (in red), which means for the 4 parameters it has in general bigger values. Virginica has also the maximum values for Sepal Lenght, Petal Lenght and Petal Width. 
 
 ## Summary of steps taken in [Analysis.py] :
 1. Download the fisher's iris data set to the project folder [1]

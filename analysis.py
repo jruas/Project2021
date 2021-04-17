@@ -115,31 +115,48 @@ def generalHist():                                                              
 
 
 def histFlower():
-    bins=20
-    colours=['goldenrod','salmon','cornflowerblue']
-    labels=['Setosa','Versicolor','Virginica']
+    bins=15
 
     fig, ((ax0, ax1), (ax2, ax3)) = plt.subplots(nrows=2, ncols=2)
 
-    ax0.hist(sepalLengthHist, bins, density=True, histtype='bar', color=colours, label=labels)
-    ax0.legend(prop={'size': 10})
+    # a line for each variable had to be created instead of code in comment to adjust transparencies for better reading.
+
+    #ax0.hist(sepalLengthHist, bins, histtype='bar', color=colours, label=labels, stacked=True, edgecolor="grey")    
+    #ax0.legend(prop={'size': 10})
+    #ax0.set_title('Sepal Length')
+
+    ax0.hist(setosaSL, bins=10, histtype="bar", color="goldenrod", label="Setosa", stacked=True, edgecolor="grey")                 ##https://jakevdp.github.io/PythonDataScienceHandbook/04.05-histograms-and-binnings.html
+    ax0.hist(virginicaSL, bins=10, histtype="bar", color="cornflowerblue", label="Virginica", stacked=True, edgecolor="grey")
+    ax0.hist(versicolorSL, bins=10, histtype="bar", color="salmon", label="Versicolor", stacked=True, edgecolor="grey", alpha=0.6)
+    ax0.legend(prop={"size":10})
     ax0.set_title('Sepal Length')
 
-    ax1.hist(sepalWidthHist, bins, density=True, histtype='bar', color=colours, label=labels, stacked=True)
+    ax1.hist(setosaSW, bins=10, histtype="bar", color="goldenrod", label="Setosa", stacked=True, edgecolor="grey")                 ##https://jakevdp.github.io/PythonDataScienceHandbook/04.05-histograms-and-binnings.html
+    ax1.hist(virginicaSW, bins=10, histtype="bar", color="cornflowerblue", label="Virginica", stacked=True, edgecolor="grey")
+    ax1.hist(versicolorSW, bins=10, histtype="bar", color="salmon", label="Versicolor", stacked=True, edgecolor="grey", alpha=0.6)
+    ax1.legend(prop={"size":10})
     ax1.set_title('Sepal Width')
 
-    ax2.hist(petalLengthHist, bins, histtype='step', color=colours, label=labels, stacked=True, fill=False)
+    ax2.hist(setosaPL, bins=5, histtype="bar", color="goldenrod", label="Setosa", stacked=True, edgecolor="grey")                 ##https://jakevdp.github.io/PythonDataScienceHandbook/04.05-histograms-and-binnings.html
+    ax2.hist(virginicaPL, bins=5, histtype="bar", color="cornflowerblue", label="Virginica", stacked=True, edgecolor="grey")
+    ax2.hist(versicolorPL, bins=5, histtype="bar", color="salmon", label="Versicolor", stacked=True, edgecolor="grey", alpha=0.6)
+    ax2.legend(prop={"size":10})
     ax2.set_title('Petal Length')
-    # Make a multiple-histogram of data-sets with different length.
-    ax3.hist(petalWidthHist, bins, histtype='bar', color=colours, label=labels)
+
+    ax3.hist(setosaPW, bins=5, histtype="bar", color="goldenrod", label="Setosa", stacked=True, edgecolor="grey")                 ##https://jakevdp.github.io/PythonDataScienceHandbook/04.05-histograms-and-binnings.html
+    ax3.hist(virginicaPW, bins=5, histtype="bar", color="cornflowerblue", label="Virginica", stacked=True, edgecolor="grey")
+    ax3.hist(versicolorPW, bins=5, histtype="bar", color="salmon", label="Versicolor", stacked=True, edgecolor="grey", alpha=0.6)
+    ax3.legend(prop={"size":10})
     ax3.set_title('Petal Width')
 
-    fig.tight_layout()
-    #plt.savefig('4plots.png')
-    plt.show()
 
-generalHist()
-#histFlower()
+
+    fig.tight_layout()
+    plt.savefig('4plots.png')
+    #plt.show()
+
+#generalHist()
+histFlower()
 
 #SCATTER:
 def scatterFlowers ():

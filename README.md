@@ -44,7 +44,7 @@ All the summary tables above can be found in the text file(VariablesSummary.txt)
 For an easier interpretation of data, histograms were developed. First, one histogram for each varaibles (disregarding the diferent species):
 
 
-<img src="generalHist.png" width="900"
+<img src="generalHist.png" width="900">
 
 
 ## Summary of steps taken in [Analysis.py] :

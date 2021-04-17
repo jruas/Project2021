@@ -7,6 +7,7 @@ import csv
 import pandas as pd
 import matplotlib.pyplot as plt 
 import numpy as np
+import scipy.stats as stats
 
 #Iris Fisher Dataset downloaded in CSV and saved in project folder. [REF]: Dataset download: https://tableconvert.com/?output=csv
 filename='IrisData.csv'
@@ -97,24 +98,24 @@ def generalHist():                                                              
     bins=15
     fig, ((ax0, ax1), (ax2, ax3)) = plt.subplots(nrows=2, ncols=2)
 
-    ax0.hist(sepalLength, bins, density=True, histtype='bar')
+    ax0.hist(sepalLength, bins, density=True, color="lightsteelblue")
     ax0.set_title('Sepal Length')
 
-    ax1.hist(sepalWidth, bins, density=True, histtype='bar', stacked=True)
+    ax1.hist(sepalWidth, bins, histtype='bar', color="lightsteelblue")
     ax1.set_title('Sepal Width')
 
-    ax2.hist(petalLength, bins, histtype='step', stacked=True, fill=False)
+    ax2.hist(petalLength, bins, histtype='bar', color="lightsteelblue")
     ax2.set_title('Petal Length')
     
-    ax3.hist(petalWidth, bins, histtype='bar')
+    ax3.hist(petalWidth, bins, histtype='bar', color="lightsteelblue")
     ax3.set_title('Petal Width')
 
     fig.tight_layout()
-    plt.savefig('general Hist.png')
+    plt.savefig('generalHist.png')
 
 
 def histFlower():
-    bins=15
+    bins=20
     colours=['goldenrod','salmon','cornflowerblue']
     labels=['Setosa','Versicolor','Virginica']
 
@@ -134,9 +135,10 @@ def histFlower():
     ax3.set_title('Petal Width')
 
     fig.tight_layout()
-    plt.savefig('4plots.png')
+    #plt.savefig('4plots.png')
+    plt.show()
 
-#generalHist()
+generalHist()
 #histFlower()
 
 #SCATTER:
@@ -245,4 +247,4 @@ def scatterFlowers ():
 
     plt.show()
 
-scatterFlowers()
+#scatterFlowers()

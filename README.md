@@ -52,6 +52,11 @@ For this analysis, it was also developed the same histograms but showing the dif
 
 Analysing the histograms above, it is possible to see that species Stosa has the minimum values of the data for Petal Length, Sepal Length and Speal Width, and maximum values of the data for Petal Width. It is also possible to see that the histogram for Virginica (in blue) is always a little to the right of histogram Versicolor (in red), which means for the 4 parameters it has in general bigger values. Virginica has also the maximum values for Sepal Lenght, Petal Lenght and Petal Width. 
 
+For a better perception of the veriables' relationship, a scatter plot was developed combining each of the varibles with the others, and always speficifing the 3 species in each plot. These plots can be found in the picture below:
+
+<img src="Scatter.png" width="900">
+
+
 ## Summary of steps taken in [Analysis.py] :
 1. Download the fisher's iris data set to the project folder [1]
 2. Converting the csv columns to lists of floats

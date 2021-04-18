@@ -156,7 +156,7 @@ def histFlower():
     #plt.show()
 
 #generalHist()
-histFlower()
+#histFlower()
 
 #SCATTER:
 def scatterFlowers ():
@@ -259,9 +259,7 @@ def scatterFlowers ():
     ax11.set_facecolor('ivory')
     ax11.legend()
 
+    plt.savefig('Scatter.png')
+    #plt.show()
 
-
-
-    plt.show()
-
-#scatterFlowers()
+scatterFlowers()

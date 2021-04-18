@@ -159,9 +159,8 @@ def histFlower():
 #histFlower()
 
 #SCATTER:
-def scatterFlowers ():
-    
-    fig, ((ax0, ax1, ax2),(ax3, ax4, ax5),(ax6, ax7, ax8), (ax9, ax10, ax11)) = plt.subplots(nrows=4, ncols=3)
+def scatterSepalLength():
+    fig, (ax0, ax1, ax2) = plt.subplots(nrows=1, ncols=3)
 
     ax0.scatter(sepalLength[:50], setosaSW, color='goldenrod', label='Setosa')      #[REF] data colors: https://matplotlib.org/stable/gallery/color/named_colors.html
     ax0.scatter(sepalLength[50:100], versicolorSW, color='salmon', label='Versicolor')
@@ -186,6 +185,37 @@ def scatterFlowers ():
     ax2.set_ylabel('Petal Length (cm)')
     ax2.set_facecolor('ivory')
     ax2.legend()
+
+    plt.tight_layout()
+    plt.savefig('ScatterSepalLength.png')
+
+def scatterFlowers ():
+    
+    fig, ((ax0, ax1, ax2),(ax3, ax4, ax5),(ax6, ax7, ax8), (ax9, ax10, ax11)) = plt.subplots(nrows=4, ncols=3)
+
+    #ax0.scatter(sepalLength[:50], setosaSW, color='goldenrod', label='Setosa')      #[REF] data colors: https://matplotlib.org/stable/gallery/color/named_colors.html
+    #ax0.scatter(sepalLength[50:100], versicolorSW, color='salmon', label='Versicolor')
+    #ax0.scatter(sepalLength[100:], virginicaSW, color='cornflowerblue', label='Virginica')
+    #ax0.set_xlabel('Sepal Length (cm)')                                                  #[REF] ax1.set_ylabel :https://stackoverflow.com/questions/6963035/pyplot-axes-labels-for-subplots
+    #ax0.set_ylabel('Sepal Width (cm)')
+    #ax0.set_facecolor('ivory')                                                       #[REF] ax1.set_facecolor: https://stackoverflow.com/questions/14088687/how-to-change-plot-background-color
+    #ax0.legend()                                                                    #[REF] ax1.legend() https://stackoverflow.com/questions/52056261/how-to-set-label-for-each-subplot-in-a-plot-in-matplotlib
+    
+    #ax1.scatter(sepalLength[:50], setosaPL, color='goldenrod', label='Setosa')
+    #ax1.scatter(sepalLength[50:100], versicolorPL, color='salmon', label='Versicolor')
+    #ax1.scatter(sepalLength[100:], virginicaPL, color='cornflowerblue', label='Virginica')
+    #ax1.set_xlabel('Sepal Length (cm)')
+    #ax1.set_ylabel('Petal Length (cm)')
+    #ax1.set_facecolor('ivory')
+    #ax1.legend()
+
+    #ax2.scatter(sepalLength[:50], setosaPW, color='goldenrod', label='Setosa')
+    #ax2.scatter(sepalLength[50:100], versicolorPW, color='salmon', label='Versicolor')
+    #ax2.scatter(sepalLength[100:], virginicaPW, color='cornflowerblue', label='Virginica')
+    #ax2.set_xlabel('Sepal Length (cm)')
+    #ax2.set_ylabel('Petal Length (cm)')
+    #ax2.set_facecolor('ivory')
+    #ax2.legend()
 
     ax3.scatter(sepalWidth[:50], setosaSL, color='goldenrod', label='Setosa')      #[REF] data colors: https://matplotlib.org/stable/gallery/color/named_colors.html
     ax3.scatter(sepalWidth[50:100], versicolorSL, color='salmon', label='Versicolor')
@@ -259,7 +289,8 @@ def scatterFlowers ():
     ax11.set_facecolor('ivory')
     ax11.legend()
 
-    plt.savefig('Scatter.png')
-    #plt.show()
+    #plt.savefig('Scatter.png')
+    plt.show()
 
-scatterFlowers()
+#scatterFlowers()
+scatterSepalLength()

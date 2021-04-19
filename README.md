@@ -54,8 +54,10 @@ Analysing the histograms above, it is possible to see that species Stosa has the
 
 For a better perception of the veriables' relationship, a scatter plot was developed combining each of the varibles with the others, and always speficifing the 3 species in each plot. These plots can be found in the picture below:
 
-<img src="ScatterSepalLength.png" width="900">
-
+<img src="ScatterSepalLength.png" width="450">
+<img src="ScatterSepalWidth.png" width="450">
+<img src="ScatterPetalLength.png" width="450">
+<img src="ScatterPetalWidth.png" width="450">
 
 ## Summary of steps taken in [Analysis.py] :
 1. Download the fisher's iris data set to the project folder [1]

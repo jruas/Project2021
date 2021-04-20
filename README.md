@@ -54,15 +54,19 @@ Analysing the histograms above, it is possible to see that species Stosa has the
 
 For a better perception of the veriables' relationship, a scatter plot was developed combining each of the varibles with the others, and always speficifing the 3 species in each plot. These plots can be found in the picture below:
 
-<img src="ScatterSepalLength.png" width="450">
-<img src="ScatterSepalWidth.png" width="450">
-<img src="ScatterPetalLength.png" width="450">
-<img src="ScatterPetalWidth.png" width="450">
+<img src="ScatterSepalLength.png" width="350">
+<img src="ScatterSepalWidth.png" width="350">
+<img src="ScatterPetalLength.png" width="350">
+<img src="ScatterPetalWidth.png" width="350">
+
+From the scatter plotos, the conclusion more easy to spot is that Setosa parameters always have very different values comparing with the other two species. It is possible to visualize in the 4 images above that the yellow dots are always more isolated.
+While for the Virginica and Versicolor, although the two "patches" or values are always very close to each other, it is possible to see a well defined boundary between the two species. The only situation where both species have overlapping values in a more considerable way is in the plot Sepal Length vs Sepal Width.
 
 ## Summary of steps taken in [Analysis.py] :
 1. Download the fisher's iris data set to the project folder [1]
 2. Converting the csv columns to lists of floats
 3. Summary of each variable to a single text file. 
+
 
 
 

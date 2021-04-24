@@ -7,10 +7,8 @@ Author: Joana Ruas
 Title: Fisher's Iris Dataset
 
 -----------------------------------------------------------------------------------------------------------------------------
-GOAL:
-Analysis data and identify the three species of Iris, based on that data analysis.
-
-This is the background research prior to the analysis of the Fisher's Irish Dataset, and the analysis of results
+This is the background research prior to the analysis of the Fisher's Irish Dataset, and the analysis of results. 
+The goal of this project is to use what we learnt in Programing and Scripting lectures, combined with our own research, to developed a code that allows the import and analysis of data. The ultimate goal regarding the analysis of that data is to be able to identify the three species of Iris.
 
 -----------------------------------------------------------------------------------------------------------------------------
 ## Table of Contents
@@ -24,13 +22,11 @@ This is the background research prior to the analysis of the Fisher's Irish Data
 ## The Iris Fisher Dataset
 The Iris Fisher dataset was developed by Ronal Fisher in 1936. The dataset consists in 50 samples of 4 parameters, for 3 flower species (Setosa, Versicolor and Virginica). The 4 parameters are Sepal Lenght, Speal Width, Petal Lenght and Petal Width. All parameters are in centimetres.
 The combination of the four parameters, allowed Fisher to develope a linear discriminant model to distinguish the species from each other.
-This dataset became a typical test case for many statistical classification techniques in machine learning. [A]
+This dataset became a typical test case for many statistical classification techniques in machine learning. [3,4]
 
 <img src="images/Iris.PNG" width="600">
 
-[B]
-
-The data Ronal Risher used, were collected by the botanist Dr.Edgar Anderson and published in 1935. Anderson collected data from Iris Setosa and Iris Versicolor from Gaspe Peninsula, Canada. To make the data collection as accurate as possible, all samples were "from the same pasture, picked on the same day and measured at the same time by the same person with the same apparatus". For the Iris Virginica, the same rigor was applied to the collection. Anderson was a student in Washington University in St.Luis in 1929, when he took a fellowship to work in Britain with other scientists. One of these scientists was Ronal Fisher, who obtained Anderson's permission to use the data in the article (xxxx) in 1936: The Use of Multiple Measurements in Taxonomic Problems” in the journal Annals of Eugenics. [A,C]
+The data Ronal Risher used, were collected by the botanist Dr.Edgar Anderson and published in 1935. Anderson collected data from Iris Setosa and Iris Versicolor from Gaspe Peninsula, Canada. To make the data collection as accurate as possible, all samples were "from the same pasture, picked on the same day and measured at the same time by the same person with the same apparatus". For the Iris Virginica, the same rigor was applied to the collection. Anderson was a student in Washington University in St.Luis in 1929, when he took a fellowship to work in Britain with other scientists. One of these scientists was Ronal Fisher, who obtained Anderson's permission to use the data in the article (xxxx) in 1936: The Use of Multiple Measurements in Taxonomic Problems” in the journal Annals of Eugenics. [3,5]
 
 
 WHY STIL IMPORTANT TODAY?
@@ -42,14 +38,14 @@ To reach what was required in this project, it was necessary to import a few mod
 
 <img src="images/modules.png" width="450">
 
-**_CSV_** was the module imported to allow reading the csv file containing the Iris Fisher Dataset. The csv module implements classes to read and write tabular data in CSV format. [csv]
+**_CSV_** was the module imported to allow reading the csv file containing the Iris Fisher Dataset. The csv module implements classes to read and write tabular data in CSV format. [6]
 
-**_Pandas_** was the module imported to create a database with the variables exported from the csv file. As it will be explained below, it was the easier way to get the analysis of those variables, as Pandas has spefic functions for data analysis. Pandas is a module widely used for data science / data analytics. [pandas]
+**_Pandas_** was the module imported to create a database with the variables exported from the csv file. As it will be explained below, it was the easier way to get the analysis of those variables, as Pandas has spefic functions for data analysis. Pandas is a module widely used for data science / data analytics. [7]
 
-**_Matplotlib_** was the module imported for plotting the histograms and scatters required in the project. Matplotlib is a comprehensive library for creating static, animated, and interactive visualizations in Python.[mat]
+**_Matplotlib_** was the module imported for plotting the histograms and scatters required in the project. Matplotlib is a comprehensive library for creating static, animated, and interactive visualizations in Python.[8]
 
-## Reading from CSV:
-The dataset was downloaded in CSV format and saved in the project folder.[download] To read and access the data, this was the code used:
+### Reading from CSV:
+The dataset was downloaded in CSV format and saved in the project folder [9]. To read and access the data, this was the code used:
 
 <img src="images/readingCSV.png" width="450">
 
@@ -59,6 +55,8 @@ The data exported from the CSV file was string type. For this analysis it was ne
 <img src="images/floatingData.png" width="450">
 
 #
+
+### Varaibles Analysis
 
 The first step to understand the database was to evaluate the classic statistic parameters (number of samples, minumum and maximum values, average, standard deviation and percentils). This was the table obtained that summarizes the data for the 4 measures: Sepal Lenght, Sepal Width, Petal Length and Petal Width (data in centimeters):
 
@@ -104,23 +102,22 @@ While for the Virginica and Versicolor, although the two "patches" or values are
 
 
 ## REFERENCES:
-read me file:
-https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project
-https://docs.github.com/pt/github/writing-on-github/basic-writing-and-formatting-syntax
+### Git Hub ReadMe file manipulation:
+[1] https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project
+[2] https://docs.github.com/pt/github/writing-on-github/basic-writing-and-formatting-syntax
 
-Iris Fisher Dataset:
-[A]: https://en.wikipedia.org/wiki/Iris_flower_data_set
-[B]: https://medium.com/@Nivitus./iris-flower-classification-machine-learning-d4e337140fa4
-[C]: https://towardsdatascience.com/the-iris-dataset-a-little-bit-of-history-and-biology-fb4812f5a7b5
+### Iris Fisher Dataset:
+[3] https://en.wikipedia.org/wiki/Iris_flower_data_set
+[4] https://medium.com/@Nivitus./iris-flower-classification-machine-learning-d4e337140fa4
+[5] https://towardsdatascience.com/the-iris-dataset-a-little-bit-of-history-and-biology-fb4812f5a7b5
 
+### Python Modules:
+[6] https://docs.python.org/3/library/csv.html
+[7] https://www.activestate.com/resources/quick-reads/what-is-pandas-in-python-everything-you-need-to-know/
+[8] https://matplotlib.org/
 
-modules
-csv: https://docs.python.org/3/library/csv.html
-pandas: https://www.activestate.com/resources/quick-reads/what-is-pandas-in-python-everything-you-need-to-know/
-mat : https://matplotlib.org/
-
-reading csv
-download: [1]: Dataset downloaded from https://tableconvert.com/?output=csv
+### Dataset Download
+[9] Dataset downloaded from https://tableconvert.com/?output=csv
 
 
 

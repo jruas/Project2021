@@ -14,10 +14,11 @@ This is the background research prior to the analysis of the Fisher's Irish Data
 
 -----------------------------------------------------------------------------------------------------------------------------
 ## Table of Contents
-* [The Iris Fisher Dataset](#The-Iris-Fisher-Dataset)
-* [Coding](#Coding-and-Analysis-of-Results)
-    * [Modules] (#Modules-used)
-
+*[The Iris Fisher Dataset](#The-Iris-Fisher-Dataset)
+*[Coding-and-Analysis-of-Results](#Coding-and-Analysis-of-Results)
+    *[Modules-used](#Modules-used)
+    *[Reading-from-CSV](#Reading-from-CSV)
+*[References](#References)
 
 ## The Iris Fisher Dataset
 The Iris Fisher dataset was developed by Ronal Fisher in 1936. The dataset consists in 50 samples of 4 parameters, for 3 flower species (Setosa, Versicolor and Virginica). The 4 parameters are Sepal Lenght, Speal Width, Petal Lenght and Petal Width. All parameters are in centimetres.
@@ -40,11 +41,20 @@ To reach what was required in this project, it was necessary to import a few mod
 
 <img src="images/modules.png" width="450">
 
-CSV was the module imported to allow reading the csv file containing the Iris Fisher Dataset. The csv module implements classes to read and write tabular data in CSV format. [csv]
+**_CSV_** was the module imported to allow reading the csv file containing the Iris Fisher Dataset. The csv module implements classes to read and write tabular data in CSV format. [csv]
 
-Pandas was the module imported to create a database with the variables exported from the csv file. As it will be explained below, it was the easier way to get the analysis of those variables, as Pandas has spefic functions for data analysis. Pandas is a module widely used for data science / data analytics. [pandas]
+**_Pandas_** was the module imported to create a database with the variables exported from the csv file. As it will be explained below, it was the easier way to get the analysis of those variables, as Pandas has spefic functions for data analysis. Pandas is a module widely used for data science / data analytics. [pandas]
 
-Matplotlib was the module imported for plotting the histograms and scatters required in the project. Matplotlib is a comprehensive library for creating static, animated, and interactive visualizations in Python.[mat]
+**_Matplotlib_** was the module imported for plotting the histograms and scatters required in the project. Matplotlib is a comprehensive library for creating static, animated, and interactive visualizations in Python.[mat]
+
+## Reading from CSV:
+The dataset was downloaded in CSV format and saved in the project folder.[download] To read and access the data, this was the code used:
+<img src="images/readingCSV.png" width="450">
+An empty dict called data was defined, and then for each row of the CSV file, the header of the column and the respective value were appended do the dict.
+The data exported from the CSV file was string type. For this analysis it was necessary to convert the data into floats. To convert all data into floats, keeping the info organized as per the CSV columns, it was used the code below, where the conversion was for done for each column in separate:
+<img src="images/floatingData.png" width="450">
+
+#
 
 The first step to understand the database was to evaluate the classic statistic parameters (number of samples, minumum and maximum values, average, standard deviation and percentils). This was the table obtained that summarizes the data for the 4 measures: Sepal Lenght, Sepal Width, Petal Length and Petal Width (data in centimeters):
 
@@ -92,6 +102,12 @@ While for the Virginica and Versicolor, although the two "patches" or values are
 ## REFERENCES:
 read me file:
 https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project
+https://docs.github.com/pt/github/writing-on-github/basic-writing-and-formatting-syntax
+
+Iris Fisher Dataset:
+[A]: https://en.wikipedia.org/wiki/Iris_flower_data_set
+[B]: https://medium.com/@Nivitus./iris-flower-classification-machine-learning-d4e337140fa4
+[C]: https://towardsdatascience.com/the-iris-dataset-a-little-bit-of-history-and-biology-fb4812f5a7b5
 
 
 modules
@@ -99,11 +115,9 @@ csv: https://docs.python.org/3/library/csv.html
 pandas: https://www.activestate.com/resources/quick-reads/what-is-pandas-in-python-everything-you-need-to-know/
 mat : https://matplotlib.org/
 
+reading csv
+download: [1]: Dataset downloaded from https://tableconvert.com/?output=csv
 
 
 
-[A]: https://en.wikipedia.org/wiki/Iris_flower_data_set
-[B]: https://medium.com/@Nivitus./iris-flower-classification-machine-learning-d4e337140fa4
-[C]: https://towardsdatascience.com/the-iris-dataset-a-little-bit-of-history-and-biology-fb4812f5a7b5
-[1]: Dataset downloaded from https://tableconvert.com/?output=csv
 

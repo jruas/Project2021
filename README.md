@@ -16,7 +16,7 @@ The Iris Fisher dataset was developed by Ronal Fisher in 1936. The dataset consi
 The combination of the four parameters, allowed Fisher to develope a linear discriminant model to distinguish the species from each other.
 This dataset became a typical test case for many statistical classification techniques in machine learning. [A]
 
-<img src="images/Iris.PNG" width="800">
+<img src="images/Iris.PNG" width="600">
 
 [B]
 
@@ -34,7 +34,7 @@ The data Ronal Risher used, were collected by the botanist Dr.Edgar Anderson and
 ## Modules used:
 To reach what was required in this project, it was necessary to import a few modules into Python:
 
-<img src="images/modules.png" width="450>
+<img src="images/modules.png" width="450">
 
 CSV was the module imported to allow reading the csv file containing the Iris Fisher Dataset. The csv module implements classes to read and write tabular data in CSV format. [csv]
 

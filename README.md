@@ -15,13 +15,11 @@ This is the background research prior to the analysis of the Fisher's Irish Data
 -----------------------------------------------------------------------------------------------------------------------------
 ## Table of Contents
 
--[The Iris Fisher Dataset](#The-Iris-Fisher-Dataset)
-
--[Coding and Analysis of Results](#Coding-and-Analysis-of-Results)
-    -[Modules used](#Modules-used)
-    -[Reading from CSV](#Reading-from-CSV)
-    
--[References](#References)
+* [The Iris Fisher Dataset](#The-Iris-Fisher-Dataset)
+* [Coding and Analysis of Results](#Coding-and-Analysis-of-Results)
+    * [Modules used](#Modules-used)
+    * [Reading from CSV](#Reading-from-CSV)
+* [References](#References)
 
 ## The Iris Fisher Dataset
 The Iris Fisher dataset was developed by Ronal Fisher in 1936. The dataset consists in 50 samples of 4 parameters, for 3 flower species (Setosa, Versicolor and Virginica). The 4 parameters are Sepal Lenght, Speal Width, Petal Lenght and Petal Width. All parameters are in centimetres.

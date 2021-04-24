@@ -16,13 +16,9 @@ This is the background research prior to the analysis of the Fisher's Irish Data
 ## Table of Contents
 
 -[The Iris Fisher Dataset](#The-Iris-Fisher-Dataset)
-
 -[Coding and Analysis of Results](#Coding-and-Analysis-of-Results)
-
     -[Modules used](#Modules-used)
-
     -[Reading from CSV](#Reading-from-CSV)
-    
 -[References](#References)
 
 ## The Iris Fisher Dataset

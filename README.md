@@ -7,11 +7,17 @@ Author: Joana Ruas
 Title: Fisher's Iris Dataset
 
 -----------------------------------------------------------------------------------------------------------------------------
+## Goal of this research:
+- Analysis data and identify the three species of Iris, based on that data analysis.
+
 This is the background research prior to the analysis of the Fisher's Irish Dataset, and the analysis of results
 
 -----------------------------------------------------------------------------------------------------------------------------
+## Table of Contents
+* [The Iris Fisher Dataset](#The-Iris-Fisher-Dataset)
+* [Coding and Analysis of Results] (#Coding-and-Analysis-of-Results)
 
-## THE Iris Fisher
+## The Iris Fisher Dataset
 The Iris Fisher dataset was developed by Ronal Fisher in 1936. The dataset consists in 50 samples of 4 parameters, for 3 flower species (Setosa, Versicolor and Virginica). The 4 parameters are Sepal Lenght, Speal Width, Petal Lenght and Petal Width. All parameters are in centimetres.
 The combination of the four parameters, allowed Fisher to develope a linear discriminant model to distinguish the species from each other.
 This dataset became a typical test case for many statistical classification techniques in machine learning. [A]
@@ -26,12 +32,8 @@ The data Ronal Risher used, were collected by the botanist Dr.Edgar Anderson and
 ## why STIL IMPORTANT TODAY?
 
 
-## Goal of this research:
-- Analysis data and identify the three species of Iris, based on that data analysis.
-
-
-# Coding and Analysis of Results
-## Modules used:
+## Coding and Analysis of Results
+### Modules used:
 To reach what was required in this project, it was necessary to import a few modules into Python:
 
 <img src="images/modules.png" width="450">

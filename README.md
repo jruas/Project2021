@@ -15,7 +15,9 @@ This is the background research prior to the analysis of the Fisher's Irish Data
 -----------------------------------------------------------------------------------------------------------------------------
 ## Table of Contents
 * [The Iris Fisher Dataset](#The-Iris-Fisher-Dataset)
-* [Coding and Analysis of Results] (#Coding-and-Analysis-of-Results)
+* [Coding](#Coding-and-Analysis-of-Results)
+    * [Modules] (#Modules-used)
+
 
 ## The Iris Fisher Dataset
 The Iris Fisher dataset was developed by Ronal Fisher in 1936. The dataset consists in 50 samples of 4 parameters, for 3 flower species (Setosa, Versicolor and Virginica). The 4 parameters are Sepal Lenght, Speal Width, Petal Lenght and Petal Width. All parameters are in centimetres.
@@ -29,7 +31,7 @@ This dataset became a typical test case for many statistical classification tech
 The data Ronal Risher used, were collected by the botanist Dr.Edgar Anderson and published in 1935. Anderson collected data from Iris Setosa and Iris Versicolor from Gaspe Peninsula, Canada. To make the data collection as accurate as possible, all samples were "from the same pasture, picked on the same day and measured at the same time by the same person with the same apparatus". For the Iris Virginica, the same rigor was applied to the collection. Anderson was a student in Washington University in St.Luis in 1929, when he took a fellowship to work in Britain with other scientists. One of these scientists was Ronal Fisher, who obtained Anderson's permission to use the data in the article (xxxx) in 1936: The Use of Multiple Measurements in Taxonomic Problems” in the journal Annals of Eugenics. [A,C]
 
 
-## why STIL IMPORTANT TODAY?
+WHY STIL IMPORTANT TODAY?
 
 
 ## Coding and Analysis of Results
@@ -88,6 +90,10 @@ While for the Virginica and Versicolor, although the two "patches" or values are
 
 
 ## REFERENCES:
+read me file:
+https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project
+
+
 modules
 csv: https://docs.python.org/3/library/csv.html
 pandas: https://www.activestate.com/resources/quick-reads/what-is-pandas-in-python-everything-you-need-to-know/

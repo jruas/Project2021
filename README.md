@@ -73,7 +73,7 @@ As the goal was to analyse generally and then locally (i.e, for each species), t
 First, an empty textfile was created - VariablesSummary.txt.
 The outputs of that analysis was written into a text file that is also included in the project folder. To write the outputs of the analysis into that file, it was created the code below:
 
-<img src="images/writtingFile.png" width="450">
+<img src="images/writingFile.png" width="450">
 
 To values had to be converted to string in order to make the written operation possible.
 

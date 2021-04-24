@@ -14,11 +14,12 @@ This is the background research prior to the analysis of the Fisher's Irish Data
 
 -----------------------------------------------------------------------------------------------------------------------------
 ## Table of Contents
-*[The Iris Fisher Dataset](#The-Iris-Fisher-Dataset)
-*[Coding-and-Analysis-of-Results](#Coding-and-Analysis-of-Results)
-    *[Modules-used](#Modules-used)
-    *[Reading-from-CSV](#Reading-from-CSV)
-*[References](#References)
+
+-[The Iris Fisher Dataset](#The-Iris-Fisher-Dataset)
+-[Coding and Analysis of Results](#Coding-and-Analysis-of-Results)
+    -[Modules used](#Modules-used)
+    -[Reading from CSV](#Reading-from-CSV)
+-[References](#References)
 
 ## The Iris Fisher Dataset
 The Iris Fisher dataset was developed by Ronal Fisher in 1936. The dataset consists in 50 samples of 4 parameters, for 3 flower species (Setosa, Versicolor and Virginica). The 4 parameters are Sepal Lenght, Speal Width, Petal Lenght and Petal Width. All parameters are in centimetres.
@@ -49,9 +50,12 @@ To reach what was required in this project, it was necessary to import a few mod
 
 ## Reading from CSV:
 The dataset was downloaded in CSV format and saved in the project folder.[download] To read and access the data, this was the code used:
+
 <img src="images/readingCSV.png" width="450">
+
 An empty dict called data was defined, and then for each row of the CSV file, the header of the column and the respective value were appended do the dict.
 The data exported from the CSV file was string type. For this analysis it was necessary to convert the data into floats. To convert all data into floats, keeping the info organized as per the CSV columns, it was used the code below, where the conversion was for done for each column in separate:
+
 <img src="images/floatingData.png" width="450">
 
 #

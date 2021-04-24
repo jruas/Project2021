@@ -7,8 +7,8 @@ Author: Joana Ruas
 Title: Fisher's Iris Dataset
 
 -----------------------------------------------------------------------------------------------------------------------------
-## Goal of this research:
-- Analysis data and identify the three species of Iris, based on that data analysis.
+GOAL:
+Analysis data and identify the three species of Iris, based on that data analysis.
 
 This is the background research prior to the analysis of the Fisher's Irish Dataset, and the analysis of results
 

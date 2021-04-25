@@ -95,7 +95,7 @@ With an histogram so, it is possible to analise the distribution of the values[1
 
 First, it was developed an histogram for each variable (Sepal Lenght, Sepal With, Petal Lenght, Petal Width), disregarding the different species. This was obtained using the code below:
 
-<img src="images/his1.png" width="450">
+<img src="images/hist1.png" width="450">
 
 The 4 plots were generated in the same image, for easier comparison. For that, the code had to be modified from a normal plot, defining the number of rows and columns in the generated plot, in this case 2 rows and 2 columns [16]. The plot generated is below and also saved in the project folder as generalHist.png:
 

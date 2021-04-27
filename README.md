@@ -22,6 +22,7 @@ The goal of this project is to use what we learnt in Programing and Scripting le
     * [Writing-into-Text-File](#Writing-into-text-file)
     * [VariablesSummary.txt](#VariablesSummary.txt)
     * [Histograms](#Histograms)
+    * [Scatter](#Scatter)
 * [References](#References)
 
 ## The Iris Fisher Dataset
@@ -101,9 +102,13 @@ The 4 plots were generated in the same image, for easier comparison. For that, t
 
 <img src="generalHist.png" width="450">
 
-From the histograms above, it is possible to realize that the Sepal Length varies from 4 to 8 (aprox), the Sepal Width from 2 to 4.5 (aprox), the Petal Length from 1 to 7 (aprox) and the Petal Width from 0 t0 2.5 (aprox). 
+From the histograms above, it is possible to realize that the Sepal Length varies from 4 to 8 (aprox), the Sepal Width from 2 to 4.5 (aprox), the Petal Length from 1 to 7 (aprox) and the Petal Width from 0 t0 2.5 (aprox). While Sepal Length and Sepal Width have a more "regular" histogram, Petal Lenght and Petal Width have almost like two patches of values. To understand what may be causing this, the histograms for the same variables but showing the different kinds of species were developed:
 
-For this analysis, it was also developed the same histograms but showing the diferences between species within the same histogram. These histograms are below:
+<img src="4plots.png" width="450">
+
+As it is possible to see, in Petal Lenght and Petal Width, the group of data on the left side of the histogram (meaning minor values), corresponds to only single species - Setosa, while the rest of the histogram has values from the other two species - Virginica and Versicolor. It is also possible to conclude that for the 4 variables, each species has their group of data together (in similar values). It is possible to see that species Stosa has the minimum values of the data for Petal Length, Sepal Length and Speal Width, and maximum values of the data for Petal Width. It is also possible to see that the histogram for Virginica (in blue) is always a little to the right of histogram Versicolor (in red), which means for the 4 parameters it has in general bigger values. Virginica has also the maximum values for Sepal Lenght, Petal Lenght and Petal Width. 
+
+### Scatter
 
 #
 
@@ -111,9 +116,7 @@ For this analysis, it was also developed the same histograms but showing the dif
 ### Varaibles Analysis
 
 
-<img src="4plots.png" width="450">
 
-Analysing the histograms above, it is possible to see that species Stosa has the minimum values of the data for Petal Length, Sepal Length and Speal Width, and maximum values of the data for Petal Width. It is also possible to see that the histogram for Virginica (in blue) is always a little to the right of histogram Versicolor (in red), which means for the 4 parameters it has in general bigger values. Virginica has also the maximum values for Sepal Lenght, Petal Lenght and Petal Width. 
 
 For a better perception of the veriables' relationship, a scatter plot was developed combining each of the varibles with the others, and always speficifing the 3 species in each plot. These plots can be found in the picture below:
 
@@ -124,16 +127,6 @@ For a better perception of the veriables' relationship, a scatter plot was devel
 
 From the scatter plotos, the conclusion more easy to spot is that Setosa parameters always have very different values comparing with the other two species. It is possible to visualize in the 4 images above that the yellow dots are always more isolated.
 While for the Virginica and Versicolor, although the two "patches" or values are always very close to each other, it is possible to see a well defined boundary between the two species. The only situation where both species have overlapping values in a more considerable way is in the plot Sepal Length vs Sepal Width.
-
-## Summary of steps taken in [Analysis.py] :
-1. Download the fisher's iris data set to the project folder [1]
-2. Converting the csv columns to lists of floats
-3. Summary of each variable to a single text file. 
-
-
-
-
-
 
 
 

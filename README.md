@@ -109,21 +109,24 @@ From the histograms above, it is possible to realize that the Sepal Length varie
 As it is possible to see, in Petal Lenght and Petal Width, the group of data on the left side of the histogram (meaning minor values), corresponds to only single species - Setosa, while the rest of the histogram has values from the other two species - Virginica and Versicolor. It is also possible to conclude that for the 4 variables, each species has their group of data together (in similar values). It is possible to see that species Stosa has the minimum values of the data for Petal Length, Sepal Length and Speal Width, and maximum values of the data for Petal Width. It is also possible to see that the histogram for Virginica (in blue) is always a little to the right of histogram Versicolor (in red), which means for the 4 parameters it has in general bigger values. Virginica has also the maximum values for Sepal Lenght, Petal Lenght and Petal Width. 
 
 ### Scatter
+A scatter plot is a graph with two variables, where the pattern created by the points, shows the correlation between those variables.[22]
+For this project, scatter plots where developed to analise the correlation between all the variables, meaning that each variable was combined in a scatter with the 3 remaining variables. For each plot, the 3 species were identified, for a better perception of the results.
+
+The code to get these plots was as the following image: 
+
+<img src="images/scatter1.png" width="450">
+
+The complete code can be found in the program analysis.py. The outputs are shown below:
+<img src="ScatterSepalLength.png" width="350">
+<img src="ScatterSepalWidth.png" width="350">
+<img src="ScatterPetalLength.png" width="350">
+<img src="ScatterPetalWidth.png" width="350">
 
 #
 
 
 ### Varaibles Analysis
 
-
-
-
-For a better perception of the veriables' relationship, a scatter plot was developed combining each of the varibles with the others, and always speficifing the 3 species in each plot. These plots can be found in the picture below:
-
-<img src="ScatterSepalLength.png" width="350">
-<img src="ScatterSepalWidth.png" width="350">
-<img src="ScatterPetalLength.png" width="350">
-<img src="ScatterPetalWidth.png" width="350">
 
 From the scatter plotos, the conclusion more easy to spot is that Setosa parameters always have very different values comparing with the other two species. It is possible to visualize in the 4 images above that the yellow dots are always more isolated.
 While for the Virginica and Versicolor, although the two "patches" or values are always very close to each other, it is possible to see a well defined boundary between the two species. The only situation where both species have overlapping values in a more considerable way is in the plot Sepal Length vs Sepal Width.
@@ -161,5 +164,15 @@ While for the Virginica and Versicolor, although the two "patches" or values are
 
 ### Hitograms and Scatters
 [15] https://www.investopedia.com/terms/h/histogram.asp
-[16]
-
+[16] https://matplotlib.org/stable/gallery/subplots_axes_and_figures/subplots_demo.html
+[17] https://jakevdp.github.io/PythonDataScienceHandbook/04.05-histograms-and-binnings.html
+[18] https://matplotlib.org/stable/gallery/color/named_colors.html
+[19] https://stackoverflow.com/questions/6963035/pyplot-axes-labels-for-subplots
+[20] https://stackoverflow.com/questions/14088687/how-to-change-plot-background-color
+[21] https://stackoverflow.com/questions/52056261/how-to-set-label-for-each-subplot-in-a-plot-in-matplotlib
+[22] https://www.mathsisfun.com/definitions/scatter-plot.html
+[23] https://matplotlib.org/stable/gallery/color/named_colors.html
+[24] https://stackoverflow.com/questions/6963035/pyplot-axes-labels-for-subplots
+[25] https://stackoverflow.com/questions/14088687/how-to-change-plot-background-color
+[26] https://stackoverflow.com/questions/52056261/how-to-set-label-for-each-subplot-in-a-plot-in-matplotlib
+    

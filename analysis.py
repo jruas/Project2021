@@ -5,26 +5,25 @@
 import csv
 import pandas as pd
 import matplotlib.pyplot as plt 
-import numpy as np
-import scipy.stats as stats
 
-#Iris Fisher Dataset downloaded in CSV and saved in project folder. [REF]: Dataset download: https://tableconvert.com/?output=csv
+
+#Iris Fisher Dataset downloaded in CSV and saved in project folder.                 [REF]: Dataset download: https://tableconvert.com/?output=csv
 filename='IrisData.csv'
 
 #Reading from CSV file     
 with open (filename, 'rt') as csvFile:
     csvReader=csv.DictReader(csvFile)
-    data={}
-    for row in csvReader:
-        for header, value in row.items():                           #[REFB]: https://stackoverflow.com/questions/19486369/extract-csv-file-specific-columns-to-list-in-python
+    data={}                                         #defining an empty dict (data)
+    for row in csvReader:                           #reading row by row
+        for header, value in row.items():           #for each row read, appends the header and the correspondent value to the dict      #[REF]: https://stackoverflow.com/questions/19486369/extract-csv-file-specific-columns-to-list-in-python
             try:
-                data[header].append(value)
+                data[header].append(value)          #Appending to the dict in this step
             except KeyError:
                 data[header]=[value]
 
-#Lists created but in strings type. 
-#Data will be converted to float in the next step
-column1=data['ï»¿sepal_length']               
+
+#Separating Dict Data into Lists. One list for each column. Data still as strings.
+column1=data['ï»¿sepal_length']                         
 column2=data['sepal_width']              
 column3=data['petal_length']
 column4=data['petal_width']
@@ -40,9 +39,12 @@ dictLists={'Sepal Length':pd.Series(sepalLength), 'Sepal Width':pd.Series(sepalW
 
 #Creating DataFrame                                                 [REFE]:https://www.w3resource.com/pandas/dataframe/dataframe-describe.php
 df=pd.DataFrame(dictLists)
-pd.set_option("display.precision", 2)       #Change table to 2 decimal places [REF:https://pandas.pydata.org/pandas-docs/stable/user_guide/options.html]                                    
-analysisPara=df.describe()                  #analysis of parameters (count, mean, stf, min, max and percentiles)
+pd.set_option("display.precision", 2)                          #Change table to 2 decimal places [REF:https://pandas.pydata.org/pandas-docs/stable/user_guide/options.html]                                    
 
+#Describe function
+#General Analysis
+analysisPara=df.describe()                                         #analysis of parameters (count, mean, stf, min, max and percentiles)
+#Analysis by species
 setosaTBL=df.loc[0:49].describe()
 versicolorTBL=df.loc[50:99].describe()
 virginicaTBL=df.loc[100:].describe()
@@ -53,7 +55,7 @@ textFile='VariablesSummary.txt'
 def writeFile ():
     with open (textFile, "wt") as tf:
         tf.write('General Table'+ '\n' +'\n')
-        tf.write(str(analysisPara) + '\n'+'\n')
+        tf.write(str(analysisPara) + '\n'+'\n')         #Values had to be converted to string. \n is for spacing between tables
         tf.write('Iris Setosa' + '\n' +'\n')
         tf.write(str(setosaTBL)+ '\n'+'\n')
         tf.write('Iris Vericolor' +'\n'+ '\n')
@@ -67,7 +69,7 @@ writeFile()
 #HISTOGRAMS
 #Separating each variable into the types of flowers.
 #SEPAL LENGTH
-setosaSL=sepalLength[:50]                                       #can eliminate this by using always like sepalLength[0:50]
+setosaSL=sepalLength[:50]                                       #can eliminate this by using always like sepalLength[0:50]. It was easier to read this way, so left it like that
 versicolorSL=sepalLength[50:100]
 virginicaSL=sepalLength[100:]
 
@@ -86,18 +88,13 @@ setosaPW=petalWidth[:50]
 versicolorPW=petalWidth[50:100]
 virginicaPW=petalWidth[100:]
 
-#Combining Lists to be able to identiy data into plots
-#I THINK IT CAN BE DELETED
-#sepalLengthHist=[setosaSL, versicolorSL, virginicaSL]
-#sepalWidthHist=[setosaSW, versicolorSW, virginicaSW]
-#petalLengthHist=[setosaPL, versicolorPL, virginicaPL]
-#petalWidthHist=[setosaPW, versicolorPW, virginicaPW]
 
-def generalHist():                                                                  #get source for subplots
+def generalHist():       
+    #4 histograms in the same plot, for easier comparison                                                           
     bins=15
-    fig, ((ax0, ax1), (ax2, ax3)) = plt.subplots(nrows=2, ncols=2)
+    fig, ((ax0, ax1), (ax2, ax3)) = plt.subplots(nrows=2, ncols=2)                      #[REF][16]: https://matplotlib.org/stable/gallery/subplots_axes_and_figures/subplots_demo.html
 
-    ax0.hist(sepalLength, bins, density=True, color="lightsteelblue")
+    ax0.hist(sepalLength, bins, histtype='bar', color="lightsteelblue")
     ax0.set_title('Sepal Length')
 
     ax1.hist(sepalWidth, bins, histtype='bar', color="lightsteelblue")
@@ -124,7 +121,7 @@ def histFlower():
     #ax0.legend(prop={'size': 10})
     #ax0.set_title('Sepal Length')
 
-    ax0.hist(setosaSL, bins=10, histtype="bar", color="goldenrod", label="Setosa", stacked=True, edgecolor="grey")                 ##https://jakevdp.github.io/PythonDataScienceHandbook/04.05-histograms-and-binnings.html
+    ax0.hist(setosaSL, bins=10, histtype="bar", color="goldenrod", label="Setosa", stacked=True, edgecolor="grey")                 #[REF][17]https://jakevdp.github.io/PythonDataScienceHandbook/04.05-histograms-and-binnings.html
     ax0.hist(virginicaSL, bins=10, histtype="bar", color="cornflowerblue", label="Virginica", stacked=True, edgecolor="grey")
     ax0.hist(versicolorSL, bins=10, histtype="bar", color="salmon", label="Versicolor", stacked=True, edgecolor="grey", alpha=0.6)
     ax0.legend(prop={"size":10})
@@ -152,8 +149,8 @@ def histFlower():
     plt.savefig('4plots.png')
     #plt.show()
 
-#generalHist()
-#histFlower()
+generalHist()
+histFlower()
 
 #SCATTER:
 def scatterSepalLength():
@@ -280,3 +277,4 @@ scatterSepalLength()
 scatterSepalWidth()
 scatterPetalLength()
 scatterPetalWidth()
+

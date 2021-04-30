@@ -7,8 +7,8 @@ Author: Joana Ruas
 Title: Fisher's Iris Dataset
 
 -----------------------------------------------------------------------------------------------------------------------------
-This is the background research prior to the analysis of the Fisher's Irish Dataset, and the analysis of results. 
-The goal of this project is to use what we learnt in Programing and Scripting lectures, combined with our own research, to developed a code that allows the import and analysis of data. The ultimate goal regarding the analysis of that data is to be able to identify the three species of Iris.
+This project consists of the background research prior to the analysis of the Fisher's Iris Dataset, as well as of the analysis of results. 
+The goal of this project is to use what we learnt in Programing and Scripting lectures, combined with our own research, so as to developed a code that will allow the import and analyse of data. The ultimate goal regarding the analysis of that data is to be able to identify the three species of Iris.
 
 -----------------------------------------------------------------------------------------------------------------------------
 ## Table of Contents
@@ -26,16 +26,13 @@ The goal of this project is to use what we learnt in Programing and Scripting le
 * [References](#References)
 
 ## The Iris Fisher Dataset
-The Iris Fisher dataset was developed by Ronal Fisher in 1936. The dataset consists in 50 samples of 4 parameters, for 3 flower species (Setosa, Versicolor and Virginica). The 4 parameters are Sepal Lenght, Speal Width, Petal Lenght and Petal Width. All parameters are in centimetres.
-The combination of the four parameters, allowed Fisher to develope a linear discriminant model to distinguish the species from each other.
+The Iris Fisher dataset was developed by Ronal Fisher in 1936. The dataset consists of 50 samples of 4 parameters, for 3 flower species (Setosa, Versicolor and Virginica). The 4 parameters are Sepal Lenght, Speal Width, Petal Lenght and Petal Width. All parameters are in centimetres.
+The combination of the four parameters, allowed Fisher to develope a linear discriminant model to distinguish the species from one another.
 This dataset became a typical test case for many statistical classification techniques in machine learning. [3,4]
 
 <img src="images/Iris.PNG" width="600">
 
-The data Ronal Risher used, were collected by the botanist Dr.Edgar Anderson and published in 1935. Anderson collected data from Iris Setosa and Iris Versicolor from Gaspe Peninsula, Canada. To make the data collection as accurate as possible, all samples were "from the same pasture, picked on the same day and measured at the same time by the same person with the same apparatus". For the Iris Virginica, the same rigor was applied to the collection. Anderson was a student in Washington University in St.Luis in 1929, when he took a fellowship to work in Britain with other scientists. One of these scientists was Ronal Fisher, who obtained Anderson's permission to use the data in the article (xxxx) in 1936: The Use of Multiple Measurements in Taxonomic Problems” in the journal Annals of Eugenics. [3,5]
-
-
-WHY STIL IMPORTANT TODAY?
+The data that Ronal Fisher used, were collected by the botanist Dr.Edgar Anderson and published in 1935. Anderson collected data from Iris Setosa and Iris Versicolor from Gaspe Peninsula, Canada. To make the data collection as accurate as possible, all samples were "from the same pasture, picked on the same day and measured at the same time by the same person with the same apparatus". For the Iris Virginica, the same rigor was applied to the collection. Anderson was a student in Washington University in St.Luis in 1929, when he took a fellowship to work in Britain with other scientists. One of these scientists was Ronal Fisher, who obtained Anderson's permission to use the data in the article (xxxx) in 1936: The Use of Multiple Measurements in Taxonomic Problems” in the journal Annals of Eugenics. [3,5]
 
 
 ## Coding and Analysis of Results
@@ -46,34 +43,34 @@ To reach what was required in this project, it was necessary to import a few mod
 
 **_CSV_** was the module imported to allow reading the csv file containing the Iris Fisher Dataset. The csv module implements classes to read and write tabular data in CSV format. [6]
 
-**_Pandas_** was the module imported to create a database with the variables exported from the csv file. As it will be explained below, it was the easier way to get the analysis of those variables, as Pandas has spefic functions for data analysis. Pandas is a module widely used for data science / data analytics. [7]
+**_Pandas_** was the module imported to create a database with the variables exported from the csv file. As it will be explained below, this was the easiest way to get the analysis of those variables, as Pandas has spefic functions for data analysis. Pandas is a widely used module for data science / data analytics. [7]
 
 **_Matplotlib_** was the module imported for plotting the histograms and scatters required in the project. Matplotlib is a comprehensive library for creating static, animated, and interactive visualizations in Python.[8]
 
 ### Reading from CSV:
-The dataset was downloaded in CSV format and saved in the project folder [9]. To read and access the data, this was the code used:
+The dataset was downloaded in CSV format and saved in the project folder [9]. This was the code used to read and access the data:
 
 <img src="images/readingCSV.png" width="450">
 
 An empty dict called data was defined, and then for each row of the CSV file, the header of the column and the respective value were appended do the dict[10].
-The data exported from the CSV file was string type. For this analysis it was necessary to convert the data into floats[11]. To convert all data into floats, keeping the info organized as per the CSV columns, it was used the code below, where the conversion was for done for each column in separate:
+The data exported from the CSV file was string type. For this analysis it was necessary to convert the data into floats[11]. To convert all data into floats, keeping the info organized as per the CSV columns, the code below was used, in which the conversion for each column was done separatly:
 
 <img src="images/floatingData.png" width="450">
 
 ### Creating Dataframe
-From the lists obtained on the step described above, it was first created a Dict with the info from all columns organized[12]. With that Dict, it was then created a dataframe using the module pandas[13], as it is exemplified below:
+From the lists obtained in the step described above, a Dict was first created,  with the info from all columns organized[12]. With that Dict, a dataframe using the module pandas was then created[13], as it is exemplified below:
 
 <img src="images/dataframe.png" width="450">
 
 ### Variables Analysis
-After the dataframe was created, it was used the built-in function describe() from pandas to get the analysis of each variable automatically.
-As the goal was to analyse generally and then locally (i.e, for each species), the describe function was used for each of the species besides the general analysis. The precision of data was set to 2 decimal places [14].
+After the dataframe was created, the built-in function describe() from pandas was used to get the analysis of each variable automatically.
+As the goal was to analyse first generally and then locally (i.e, for each species), the describe function was used for each of the species besides the general analysis. The precision of data was set to 2 decimal places [14].
 
 <img src="images/describe.png" width="450">
 
 ### Writing into txt File
 First, an empty textfile was created - VariablesSummary.txt.
-The outputs of that analysis was written into a text file that is also included in the project folder. To write the outputs of the analysis into that file, it was created the code below:
+The outputs of that analysis were written into a text file that is also included in the project folder. To write the outputs of the analysis into that file, the code below was created:
 
 <img src="images/writingFile.png" width="450">
 
@@ -81,7 +78,7 @@ To values had to be converted to string in order to make the written operation p
 
 ### VariablesSummary.txt
 
-The text file generated by the python program looks like image below:
+The text file generated by the python program looks like the image below:
 
 <img src="images/textfile.png" width="450">
 
